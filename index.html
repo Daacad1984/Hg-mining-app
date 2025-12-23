@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HG Mining</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card" id="auth">
+  <h1>HG Mining</h1>
+  <input id="userId" placeholder="Email or Phone number">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="register()">Register</button>
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="card hidden" id="dashboard">
+  <h2>Dashboard</h2>
+  <div class="info">Balance: $<span id="balance">0</span></div>
+  <div class="info">Mining Speed: $<span id="speed">0</span> / 24h</div>
+
+  <button id="startBtn" onclick="startMining()">Start Mining</button>
+  <button class="hidden" id="depositBtn" onclick="showDeposit()">Deposit</button>
+  <button class="hidden" id="withdrawBtn" onclick="showWithdraw()">Withdraw</button>
+
+  <div id="depositBox" class="box hidden"></div>
+  <div id="withdrawBox" class="box hidden"></div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<div class="card admin hidden" id="adminPanel">
+  <h2>Admin Panel</h2>
+  <div id="adminUsers"></div>
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
